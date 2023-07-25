@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "119576024587",
+    "project_id": "medicine-app-825e2",
+    "storage_bucket": "medicine-app-825e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119576024587:android:1ec41127bdb88ac374990e",
+        "android_client_info": {
+          "package_name": "com.example.mymedcine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "119576024587-23egvsemoh12sn15poknj7q1i0sjnqo4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQGwLwZ4xp5F34x8h9W_LV-EHRtYfwJ14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "119576024587-23egvsemoh12sn15poknj7q1i0sjnqo4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

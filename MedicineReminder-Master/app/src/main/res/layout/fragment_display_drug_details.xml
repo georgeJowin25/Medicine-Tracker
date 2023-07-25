@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context=".drugdetails.view.DisplayDrugDetailsFragment">
+    <include layout="@layout/display_drugs_fragment_toolbar" />
+    <ScrollView
+        android:id="@+id/display_drug_details_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="128dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="16dp">
+
+            <TextView
+                android:id="@+id/display_drug_details_last_taken_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lastTakenLabel"
+                android:textSize="16sp"
+                android:textColor="@color/dark_navy_blue"
+                android:textFontWeight="700"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/display_drug_details_last_taken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="#676767"
+                android:visibility="gone"
+                android:textSize="@dimen/secondary_text"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/display_drug_details_last_taken_label" />
+
+            <TextView
+                android:id="@+id/display_drug_details_reminder_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/remindersLabel"
+                android:textSize="16sp"
+                android:textColor="@color/dark_navy_blue"
+                android:textFontWeight="700"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/display_drug_details_last_taken" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/display_drug_details_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/suspendbtn"
+                style="?attr/materialButtonOutlinedStyle"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/display_drug_details_last_taken" />
+
+            <TextView
+                android:id="@+id/display_drug_details_occurence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/dark_navy_blue"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/display_drug_details_reminder_label" />
+
+            <TextView
+                android:id="@+id/display_drug_details_reminding_hours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:minHeight="48dp"
+                android:textColor="#676767"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/display_drug_details_occurence" />
+
+            <TextView
+                android:id="@+id/display_drug_details_instruct_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/instructions_label"
+                android:textSize="16sp"
+                android:textColor="@color/dark_navy_blue"
+                android:textFontWeight="700"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/display_drug_details_reminding_hours" />
+
+            <TextView
+                android:id="@+id/display_drug_details_instruct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:minHeight="48dp"
+                android:textColor="#676767"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/display_drug_details_instruct_label" />
+
+            <TextView
+                android:id="@+id/display_drug_details_reasons_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/reasons_label"
+                android:textSize="16sp"
+                android:textColor="@color/dark_navy_blue"
+                android:textFontWeight="700"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/display_drug_details_instruct" />
+
+            <TextView
+                android:id="@+id/display_drug_details_reasons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:minHeight="48dp"
+                android:textColor="#676767"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/display_drug_details_reasons_label" />
+
+            <TextView
+                android:id="@+id/display_drug_details_refills_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/refills_label"
+                android:textSize="16sp"
+                android:textColor="@color/dark_navy_blue"
+                android:textFontWeight="700"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/display_drug_details_reasons" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/display_drug_details_refill_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/refillsBTN"
+                style="?attr/materialButtonOutlinedStyle"
+                android:textColor="@color/dark_navy_blue"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/display_drug_details_reasons" />
+
+            <TextView
+                android:id="@+id/display_drug_details_refills"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:minHeight="48dp"
+                android:textColor="#676767"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/display_drug_details_refills_label" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/display_drug_add_dose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_dose_button"
+                app:icon="@drawable/ic_baseline_add_24"
+                android:layout_marginTop="32dp"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/display_drug_details_refills"
+                app:layout_constraintRight_toRightOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
